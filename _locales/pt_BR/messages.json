@@ -1,0 +1,20 @@
+{
+    "name": {
+        "message": "Youtube Pesquisa"
+    },
+    "description": {
+        "message": "Utilize o botão direito para pesquisar direto no youtube"
+    },
+    "default_menu": {
+        "message": "Pesquisar"
+    },
+    "edit_menu": {
+        "message": "Alterar e pesquisar"
+    },
+    "prompt_mesage": {
+        "message": "Altere o texto que deseja pesquisar"
+    },
+    "url": {
+        "message": "youtube.com.br"
+    }
+}

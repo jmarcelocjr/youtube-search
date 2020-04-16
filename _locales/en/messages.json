@@ -1,0 +1,20 @@
+{
+    "name": {
+        "message": "Youtube Search"
+    },
+    "description": {
+        "message": "Use the context menu to search in Youtube"
+    },
+    "default_menu": {
+        "message": "Search"
+    },
+    "edit_menu": {
+        "message": "Edit and search"
+    },
+    "prompt_mesage": {
+        "message": "Edit the text to search"
+    },
+    "url": {
+        "message": "youtube.com"
+    }
+}
