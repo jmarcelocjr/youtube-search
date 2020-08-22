@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 chrome.contextMenus.onClicked.addListener(function(item, tab) {
-    let selectedText = encodeURIComponent(item.selectionText); //escape characters such as & in the selected text
+    let selectedText = item.selectionText;
 
     if (item.menuItemId == 'edit') {
         selectedText = prompt(chrome.i18n.getMessage('prompt_message'), selectedText);
@@ -24,6 +24,6 @@ chrome.contextMenus.onClicked.addListener(function(item, tab) {
         }
     }
 
-    let url = 'https://'+ chrome.i18n.getMessage('url') +'/search?q=' + selectedText;
+    let url = 'https://'+ chrome.i18n.getMessage('url') +'/search?q=' + encodeURIComponent(selectedText);
     chrome.tabs.create({url: url, index: tab.index + 1});
 });
