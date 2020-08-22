@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 chrome.contextMenus.onClicked.addListener(function(item, tab) {
-    let selectedText = item.selectionText;
+    let selectedText = encodeURIComponent(item.selectionText); //escape characters such as & in the selected text
 
     if (item.menuItemId == 'edit') {
         selectedText = prompt(chrome.i18n.getMessage('prompt_message'), selectedText);
