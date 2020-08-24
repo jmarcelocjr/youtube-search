@@ -24,6 +24,6 @@ chrome.contextMenus.onClicked.addListener(function(item, tab) {
         }
     }
 
-    let url = 'https://'+ chrome.i18n.getMessage('url') +'/search?q=' + selectedText;
+    let url = 'https://'+ chrome.i18n.getMessage('url') +'/search?q=' + encodeURIComponent(selectedText);
     chrome.tabs.create({url: url, index: tab.index + 1});
 });
